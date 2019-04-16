@@ -1,0 +1,37 @@
+<mat-dialog-content style="height:300px">
+
+  <h2 style="color: #169d53;">Login</h2>
+
+  <div class="input-group input-group-lg" style="margin-top: 30px; ">
+    <div class="input-group-prepend" style="min-width: 120px;">
+      <span class="input-group-text" id="inputGroup-sizing-lg" style="min-width: 100px !important;">Username</span>
+    </div>
+    <input type="text" class="form-control" [(ngModel)]="username" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-lg">
+  </div>
+
+
+  <div class="input-group input-group-lg" style="margin-top: 30px; ">
+    <div class="input-group-prepend" style="min-width: 120px;">
+      <span class="input-group-text" id="inputGroup-sizing-lg" style="min-width: 122px;">Password</span>
+    </div>
+    <input type="password" class="form-control" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-lg" [(ngModel)]="password">
+  </div>
+
+
+  <a (click)="forgotPassword()" style="margin-left:10px;font-size: 12px" href="">Forgot Password?</a>
+
+  <mat-dialog-actions style="margin-top: 30px; ">
+    <div class="row">
+      <div class="col-6">
+        <button style="margin-left:150px" mat-raised-button type="button" class="btn btn-secondary"
+          (click)="onCloseCancel()">Cancel</button>
+      </div>
+      <div class="col-6">
+        <button style="margin-left:100px" mat-raised-button type="button" class="btn btn-success"
+          (click)="login()">Login</button>
+      </div>
+    </div>
+  </mat-dialog-actions>
+</mat-dialog-content>

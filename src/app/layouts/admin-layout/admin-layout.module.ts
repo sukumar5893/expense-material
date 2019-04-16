@@ -10,12 +10,13 @@ import { TypographyComponent } from '../../typography/typography.component';
 import { IconsComponent } from '../../icons/icons.component';
 import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
-import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { ExpensesComponent } from '../../expenses/expenses.component';
 import { IncomeComponent } from '../../income/income.component';
 import { ProgresscircleComponent } from '../../progresscircle/progresscircle.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { RecentComponent } from '../../recent/recent.component';
+import { InputsModule, WavesModule, ButtonsModule } from 'angular-bootstrap-md';
+import { DemoMaterialModule } from '../../layouts/admin-layout/material.module';
 
 import {
   MatButtonModule,
@@ -30,6 +31,7 @@ import {
     CommonModule,
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
+    ReactiveFormsModule,
     MatButtonModule,
     MatRippleModule,
     MatFormFieldModule,
@@ -57,7 +59,11 @@ import {
       "animation": true,
       "responsive": true
 
-    })
+    }),
+    InputsModule.forRoot(),
+    WavesModule.forRoot(),
+    ButtonsModule,
+    DemoMaterialModule
   ],
   declarations: [
     DashboardComponent,
@@ -67,7 +73,6 @@ import {
     IconsComponent,
     MapsComponent,
     NotificationsComponent,
-    UpgradeComponent,
     ExpensesComponent,
     IncomeComponent,
     ProgresscircleComponent,

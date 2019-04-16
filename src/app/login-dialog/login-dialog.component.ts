@@ -28,7 +28,7 @@ export class LoginDialogComponent implements OnInit {
     const isValid: Boolean = await this.authService.login(this.username, this.password);
     try {
       if (isValid) {
-        this.router.navigate(["home"]);
+        this.router.navigate(["layout"]);
         this.DialogRef.close('Login');
       }
     }

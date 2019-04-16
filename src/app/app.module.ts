@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app.routing';
@@ -39,6 +40,7 @@ import { AuthService } from './auth.service';
     LoginDialogComponent
 
   ],
+  entryComponents: [LoginDialogComponent, SignupComponent],
 
   imports: [
     BrowserAnimationsModule,
@@ -46,7 +48,7 @@ import { AuthService } from './auth.service';
     HttpModule,
     ComponentsModule,
     RouterModule,
-    AppRoutingModule,
+    AppRoutingModule, HttpClientModule,
 
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'

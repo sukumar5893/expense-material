@@ -20,7 +20,7 @@ export class ShowcaseComponent implements OnInit {
   openLoginDialog() {
     let dialogRef = this.dialog.open(LoginDialogComponent, {
       width: '600px',
-      height: '350px'
+      height: '450px'
     });
   }
   openSignupDialog() {
